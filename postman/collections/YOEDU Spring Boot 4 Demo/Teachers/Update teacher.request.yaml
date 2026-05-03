@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/api/teachers/{{teacherId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "teacherCode": "GV999",
+      "fullName": "Le Van Demo Updated",
+      "phone": "0912345678",
+      "email": "teacher.demo.updated@example.com",
+      "address": "789 Demo Ward",
+      "description": "Cap nhat giao vien demo",
+      "workUnit": "YOEDU",
+      "experience": "6 years",
+      "achievement": "Top mentor 2026",
+      "teacherRole": "BOTH",
+      "isActive": true
+    }
+order: 4000

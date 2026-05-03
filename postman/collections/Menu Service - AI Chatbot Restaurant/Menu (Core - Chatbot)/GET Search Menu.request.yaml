@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/menu/search?q=phở bò&page=1&limit=10"
+method: GET
+headers:
+  x-service-token: "{{service_token}}"
+queryParams:
+  q: phở bò
+  page: "1"
+  limit: "10"
+order: 2000

@@ -1,0 +1,40 @@
+$kind: http-request
+name: POST /api/posts (multipart + query)
+url: "{{baseUrl}}/api/posts?title=Phong+tro+Q1&description=Mo+ta&address=123+Le+Loi&ward=Ben+Nghe&district=1&city=Ho+Chi+Minh&latitude=10.762622&longitude=106.660172&price=3000000&area=20&roomType=PHONG_TRO&amenities=Wifi&amenities=May+lanh"
+method: POST
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  - key: title
+    value: Phong+tro+Q1
+  - key: description
+    value: Mo+ta
+  - key: address
+    value: 123+Le+Loi
+  - key: ward
+    value: Ben+Nghe
+  - key: district
+    value: "1"
+  - key: city
+    value: Ho+Chi+Minh
+  - key: latitude
+    value: "10.762622"
+  - key: longitude
+    value: "106.660172"
+  - key: price
+    value: "3000000"
+  - key: area
+    value: "20"
+  - key: roomType
+    value: PHONG_TRO
+  - key: amenities
+    value: Wifi
+  - key: amenities
+    value: May+lanh
+body:
+  type: formdata
+  content:
+    - type: file
+      key: images
+      src: ""
+order: 5000

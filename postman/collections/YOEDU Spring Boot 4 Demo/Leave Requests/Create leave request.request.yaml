@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/api/leave-requests"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "studentId": {{studentId}},
+      "courseClassId": {{courseClassId}},
+      "leaveDate": "2026-06-04",
+      "reason": "Ban viec gia dinh"
+    }
+order: 1000

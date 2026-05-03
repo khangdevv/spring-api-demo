@@ -1,0 +1,10 @@
+$kind: http-request
+name: GET /api/posts/admin
+url: "{{baseUrl}}/api/posts/admin?page=0&size=20"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  page: "0"
+  size: "20"
+order: 11000

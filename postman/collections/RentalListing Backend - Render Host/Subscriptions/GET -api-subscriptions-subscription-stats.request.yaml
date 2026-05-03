@@ -1,0 +1,9 @@
+$kind: http-request
+name: GET /api/subscriptions/subscription-stats
+url: "{{baseUrl}}/api/subscriptions/subscription-stats?year={{year}}"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  year: "{{year}}"
+order: 2000

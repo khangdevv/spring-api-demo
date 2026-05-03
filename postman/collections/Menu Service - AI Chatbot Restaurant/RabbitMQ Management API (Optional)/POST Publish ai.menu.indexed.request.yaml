@@ -1,0 +1,21 @@
+$kind: http-request
+description: Use real UUID in {{document_id}} from upload response.
+url: "{{rabbit_base_url}}/api/exchanges/%2F/chatbot.events/publish"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "properties": {},
+      "routing_key": "ai.menu.indexed",
+      "payload": "{\"trace_id\":\"pm-{{$timestamp}}\",\"data\":{\"document_id\":\"{{document_id}}\"}}",
+      "payload_encoding": "string"
+    }
+auth:
+  type: basic
+  credentials:
+    username: "{{rabbit_user}}"
+    password: "{{rabbit_pass}}"
+order: 1000

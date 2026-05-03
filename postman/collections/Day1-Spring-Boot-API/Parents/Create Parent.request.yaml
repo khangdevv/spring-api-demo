@@ -1,0 +1,17 @@
+$kind: http-request
+name: Create Parent
+method: POST
+url: '{{baseUrl}}/parents'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "fullName": "Tran Thi B",
+      "phoneNumber": "0912345678",
+      "email": "parent@example.com",
+      "address": "123 Main Street, Ho Chi Minh City"
+    }

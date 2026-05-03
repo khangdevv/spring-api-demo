@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}/status?status=APPROVED"
+method: PUT
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  status: APPROVED
+order: 4000

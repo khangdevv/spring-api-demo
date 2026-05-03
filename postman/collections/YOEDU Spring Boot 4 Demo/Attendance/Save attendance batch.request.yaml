@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{baseUrl}}/api/attendances/batch"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "courseClassId": {{courseClassId}},
+      "attendanceDate": "2026-06-03",
+      "attendances": [
+        {
+          "studentId": {{studentId}},
+          "status": "PRESENT",
+          "note": "Co mat"
+        },
+        {
+          "studentId": 2,
+          "status": "ABSENT",
+          "note": "Xin nghi"
+        }
+      ]
+    }
+order: 2000

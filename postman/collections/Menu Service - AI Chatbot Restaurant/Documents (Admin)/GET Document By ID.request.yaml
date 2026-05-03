@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/admin/menu/upload/{{document_id}}"
+method: GET
+headers:
+  x-service-token: "{{service_token}}"
+  x-user-role: "{{admin_role}}"
+order: 3000

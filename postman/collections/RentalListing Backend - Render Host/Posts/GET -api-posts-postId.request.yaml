@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /api/posts/:postId
+url: "{{baseUrl}}/api/posts/{{postId}}"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+order: 4000

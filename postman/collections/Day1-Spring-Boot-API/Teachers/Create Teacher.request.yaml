@@ -1,0 +1,20 @@
+$kind: http-request
+name: Create Teacher
+method: POST
+url: '{{baseUrl}}/teachers'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "teacherCode": "T001",
+      "fullName": "Nguyen Van A",
+      "phone": "0901234567",
+      "email": "teacher@example.com",
+      "role": "TEACHER",
+      "id_card_url": "https://example.com/id-card.jpg",
+      "active": true
+    }

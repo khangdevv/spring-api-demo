@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{baseUrl}}/api/course-classes?search=&page=0&size=10&sort=id,desc"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  search: ""
+  page: "0"
+  size: "10"
+  sort: id,desc
+examples: ./.resources/List classes.resources/examples
+order: 1000

@@ -1,0 +1,19 @@
+$kind: http-example
+request:
+  url: ""
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  body:
+    type: json
+    content: |-
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "Phở bò tái nạm",
+        "category": "food",
+        "price": 65000,
+        "is_available": true,
+        "created_at": "2026-04-23T16:00:00.000Z"
+      }
+order: 1000

@@ -1,0 +1,14 @@
+$kind: http-request
+name: Echo
+method: POST
+url: '{{baseUrl}}/api/health/echo'
+order: 2000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "message": "Hello"
+    }

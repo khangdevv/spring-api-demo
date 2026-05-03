@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/api/teachers"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "teacherCode": "GV999",
+      "fullName": "Le Van Demo",
+      "phone": "0912345678",
+      "email": "teacher.demo@example.com",
+      "address": "789 Demo Ward",
+      "description": "Giao vien demo",
+      "workUnit": "YOEDU",
+      "experience": "5 years",
+      "achievement": "Top mentor",
+      "teacherRole": "TEACHER",
+      "isActive": true
+    }
+order: 3000

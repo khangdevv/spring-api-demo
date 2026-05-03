@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/admin/menu/upload"
+method: POST
+headers:
+  x-service-token: "{{SERVICE_TOKEN}}"
+  x-user-role: admin
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: /C:/Users/baokh/Downloads/Tam/2002240546-Nguyen Luu Bao Tam-KTXS-Nhom5.pdf
+      description: Chọn file PDF, Excel (.xlsx) hoặc Word (.docx)
+scripts:
+  - type: afterResponse
+    code: |-
+      if (pm.response.code === 201) {
+        const res = pm.response.json();
+        pm.collectionVariables.set('DOCUMENT_ID', res.id);
+        console.log('✅ Document ID saved:', res.id);
+      }
+    language: text/javascript
+order: 1000

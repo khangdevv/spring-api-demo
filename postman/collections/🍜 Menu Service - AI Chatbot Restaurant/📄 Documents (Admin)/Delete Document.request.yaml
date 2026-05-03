@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/admin/menu/upload/{{DOCUMENT_ID}}"
+method: DELETE
+headers:
+  x-service-token: "{{SERVICE_TOKEN}}"
+  x-admin-role: admin
+order: 5000

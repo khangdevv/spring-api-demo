@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/admin/menu-items/{{menu_item_id}}"
+method: DELETE
+headers:
+  x-user-role: "{{admin_role}}"
+order: 3000

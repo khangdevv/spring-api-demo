@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/learning-results"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "studentId": {{studentId}},
+      "courseClassId": {{courseClassId}},
+      "resultMonth": "2026-06-01",
+      "score": 8.9,
+      "teacherComment": "Tien bo tot"
+    }
+order: 1000

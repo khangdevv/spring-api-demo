@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Parent
+method: DELETE
+url: '{{baseUrl}}/parents/{{parentId}}'
+order: 5000

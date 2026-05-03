@@ -1,0 +1,7 @@
+$kind: collection
+description: |-
+  Base path: /api/v1/admin/menu-items
+
+  Yêu cầu header:
+  - x-admin-role: admin
+order: 1000

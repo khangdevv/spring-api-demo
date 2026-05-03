@@ -1,0 +1,21 @@
+# Use this workspace to collaborate
+workspace:
+  id: 09d9fecf-b3a1-484f-b9b4-8542646a41cc
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ..\postman\collections\🍜 Menu Service - AI Chatbot Restaurant: 44054039-22cdc066-0313-4d89-a69f-d50e3c165b05
+    ..\postman\collections\RentalListing Backend - Render Host: 44054039-452a4c1c-4ee3-431d-9497-f1338cebe537
+    ..\postman\collections\Menu Service - AI Chatbot Restaurant: 44054039-69e85e06-1a6a-4a9b-a49e-a7ee8ed4ed2e
+    ..\postman\collections\YOEDU Spring Boot 4 Demo: 44054039-73b5755a-6a1d-4b05-ac9c-4ed7d2cd6453
+    ..\postman\collections\Day1-Spring-Boot-API: 44054039-a78ada55-065f-4a2b-b937-e336853a16d8
+  environments:
+    ..\postman\environments\Day1-Local.environment.yaml: 44054039-07a4a549-0929-463f-8b63-8c5d7b42f29c
+
+# All resources in the `postman/` folder are automatically registered in Local View.
+# Point to additional files outside the `postman/` folder to register them individually. Example:
+#localResources:
+#  collections:
+#    - ../tests/E2E Test Collection/

@@ -1,0 +1,16 @@
+$kind: http-request
+description: Cập nhật thông tin món ăn. Chỉ cần truyền các field muốn thay đổi.
+url: "{{BASE_URL}}/api/v1/admin/menu-items/{{MENU_ITEM_ID}}"
+method: PUT
+headers:
+  x-user-role: admin
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "price": 70000,
+      "is_available": false
+    }
+examples: ./.resources/Update Menu Item.resources/examples
+order: 2000

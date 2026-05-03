@@ -1,0 +1,23 @@
+$kind: http-request
+name: PUT /api/posts/:postId (multipart + query)
+url: "{{baseUrl}}/api/posts/{{postId}}?title=Cap+nhat+tin&description=Mo+ta+moi&address=123+Le+Loi&ward=Ben+Nghe&district=1&city=Ho+Chi+Minh&price=3200000&area=22&roomType=PHONG_TRO"
+method: PUT
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  title: Cap+nhat+tin
+  description: Mo+ta+moi
+  address: 123+Le+Loi
+  ward: Ben+Nghe
+  district: "1"
+  city: Ho+Chi+Minh
+  price: "3200000"
+  area: "22"
+  roomType: PHONG_TRO
+body:
+  type: formdata
+  content:
+    - type: file
+      key: images
+      src: ""
+order: 6000

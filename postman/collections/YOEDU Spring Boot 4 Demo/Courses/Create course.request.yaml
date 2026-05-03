@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/api/courses"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "courseCode": "KHOA999",
+      "name": "Khoa hoc Demo",
+      "description": "Mo ta khoa hoc demo",
+      "tuitionFee": 1500000,
+      "totalSessions": 24,
+      "isActive": true
+    }
+order: 3000

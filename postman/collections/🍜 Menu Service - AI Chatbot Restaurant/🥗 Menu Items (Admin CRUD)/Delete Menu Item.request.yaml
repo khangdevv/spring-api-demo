@@ -1,0 +1,7 @@
+$kind: http-request
+description: Xóa món ăn theo ID. Trả về 204 No Content nếu thành công.
+url: "{{BASE_URL}}/api/v1/admin/menu-items/{{MENU_ITEM_ID}}"
+method: DELETE
+headers:
+  x-user-role: admin
+order: 3000

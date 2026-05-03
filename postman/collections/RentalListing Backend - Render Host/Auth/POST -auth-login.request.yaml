@@ -1,0 +1,22 @@
+$kind: http-request
+name: POST /auth/login
+url: "{{baseUrl}}/auth/login"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "email": "baokhang81104@gmail.com",
+      "password": "adminn"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      let data = {};
+      try { data = pm.response.json(); } catch (e) {}
+      const token = data.token || data.accessToken || data.jwt;
+      if (token) pm.collectionVariables.set('token', token);
+    language: text/javascript
+order: 1000

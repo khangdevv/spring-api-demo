@@ -1,0 +1,18 @@
+name: Day1-Local
+values:
+  - key: baseUrl
+    value: 'http://localhost:8080'
+    enabled: true
+    type: default
+  - key: courseId
+    value: '1'
+    enabled: true
+    type: default
+  - key: teacherId
+    value: '1'
+    enabled: true
+    type: default
+  - key: parentId
+    value: '1'
+    enabled: true
+    type: default

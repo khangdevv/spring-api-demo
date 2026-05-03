@@ -1,0 +1,15 @@
+$kind: http-example
+request:
+  url: ""
+  method: PATCH
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": 404,
+        "message": "Menu item with ID invalid-id not found"
+      }
+order: 2000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/api/rooms/{{roomId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "roomCode": "PH999",
+      "name": "Phong Demo Updated",
+      "capacity": 35,
+      "description": "Phong hoc demo da cap nhat"
+    }
+order: 4000

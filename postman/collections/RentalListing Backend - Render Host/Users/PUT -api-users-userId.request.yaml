@@ -1,0 +1,28 @@
+$kind: http-request
+name: PUT /api/users/:userId
+url: "{{baseUrl}}/api/users/{{userId}}"
+method: PUT
+headers:
+  Authorization: Bearer {{token}}
+body:
+  type: formdata
+  content:
+    - type: text
+      key: fullName
+      value: Test User
+    - type: text
+      key: full_name
+      value: Test User
+    - type: text
+      key: phone
+      value: "0901234567"
+    - type: text
+      key: plan
+      value: FREE
+    - type: text
+      key: password
+      value: ""
+    - type: file
+      key: avatar
+      src: ""
+order: 2000

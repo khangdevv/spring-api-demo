@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/enrollments"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "studentId": {{studentId}},
+      "courseClassId": {{courseClassId}},
+      "enrolledAt": "2026-06-01",
+      "status": "ACTIVE",
+      "note": "Ghi danh bang Postman"
+    }
+order: 1000

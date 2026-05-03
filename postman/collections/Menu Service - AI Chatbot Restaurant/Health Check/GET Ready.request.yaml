@@ -1,0 +1,5 @@
+$kind: http-request
+description: Readiness probe
+url: "{{base_url}}/api/v1/health/ready"
+method: GET
+order: 2000

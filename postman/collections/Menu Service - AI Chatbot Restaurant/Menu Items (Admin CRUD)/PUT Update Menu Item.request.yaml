@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/admin/menu-items/{{menu_item_id}}"
+method: PUT
+headers:
+  x-user-role: "{{admin_role}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "price": 99000,
+      "description": "Updated by Postman",
+      "tags": ["updated", "manual-test"]
+    }
+order: 2000

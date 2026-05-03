@@ -1,0 +1,13 @@
+$kind: http-request
+name: GET /api/payments/return
+url: "{{baseUrl}}/api/payments/return?vnp_Amount=10000000&vnp_BankCode=NCB&vnp_OrderInfo=test&vnp_ResponseCode=00&vnp_SecureHash=test"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  vnp_Amount: "10000000"
+  vnp_BankCode: NCB
+  vnp_OrderInfo: test
+  vnp_ResponseCode: "00"
+  vnp_SecureHash: test
+order: 1000

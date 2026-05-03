@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{baseUrl}}/api/course-classes"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "classCode": "LOP999",
+      "name": "Lop Demo",
+      "courseId": {{courseId}},
+      "roomId": {{roomId}},
+      "scheduleSlotId": {{scheduleSlotId}},
+      "mainTeacherId": {{teacherId}},
+      "assistantTeacherId": null,
+      "startDate": "2026-06-01",
+      "endDate": "2026-08-31",
+      "maxStudents": 25,
+      "tuitionFee": 1800000,
+      "status": "OPEN"
+    }
+order: 4000

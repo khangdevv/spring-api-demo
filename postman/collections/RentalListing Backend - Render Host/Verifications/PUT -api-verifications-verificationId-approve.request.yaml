@@ -1,0 +1,11 @@
+$kind: http-request
+name: PUT /api/verifications/:verificationId/approve
+url: "{{baseUrl}}/api/verifications/{{verificationId}}/approve"
+method: PUT
+headers:
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+body:
+  type: text
+  content: "{}"
+order: 5000

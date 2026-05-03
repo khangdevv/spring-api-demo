@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/attendances"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "courseClassId": {{courseClassId}},
+      "studentId": {{studentId}},
+      "attendanceDate": "2026-06-03",
+      "status": "PRESENT",
+      "note": "Diem danh don"
+    }
+order: 1000

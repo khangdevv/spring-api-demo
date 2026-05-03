@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{baseUrl}}/api/students/with-parent"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "parentFullName": "Nguyen Thi Demo",
+      "parentPhone": "0901111222",
+      "parentEmail": "parent.demo@example.com",
+      "parentAddress": "123 Demo Street",
+      "parentRelationship": "MOTHER",
+      "parentGender": "FEMALE",
+      "studentCode": "HV1000",
+      "fullName": "Hoc vien Kem Phu Huynh",
+      "dateOfBirth": "2015-02-15",
+      "gender": "FEMALE",
+      "gradeLevel": "Lop 5",
+      "schoolName": "Tieu hoc Demo",
+      "phone": "0933000111",
+      "description": "Hoc vien tao kem phu huynh",
+      "status": "ACTIVE",
+      "latestScore": 8.8,
+      "note": "Tao bang Postman"
+    }
+order: 4000

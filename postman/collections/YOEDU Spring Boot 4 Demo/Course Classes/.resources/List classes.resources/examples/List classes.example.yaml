@@ -1,0 +1,130 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/course-classes?search=&page=0&size=10&sort=id,desc"
+  method: GET
+  headers:
+    Authorization: Bearer {{token}}
+  queryParams:
+    search: ""
+    page: "0"
+    size: "10"
+    sort: id,desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: "0"
+    Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+    Pragma: no-cache
+    Expires: "0"
+    X-Frame-Options: DENY
+    Content-Type: application/json
+    Content-Length: "1858"
+    Date: Sun, 03 May 2026 02:56:45 GMT
+    Keep-Alive: timeout=60
+    Connection: keep-alive
+  body:
+    type: text
+    content: |-
+      {
+          "success": true,
+          "message": "Success",
+          "data": {
+              "content": [
+                  {
+                      "id": 3,
+                      "classCode": "TOAN6-C",
+                      "name": "Toán tư duy 6C",
+                      "courseId": 3,
+                      "courseName": "Toán tư duy lớp 6",
+                      "roomId": 1,
+                      "roomName": "Phòng 101",
+                      "scheduleSlotId": 2,
+                      "scheduleLabel": "T4-1730 - T4",
+                      "mainTeacherId": 1,
+                      "mainTeacherName": "Lê Hoàng Nam",
+                      "assistantTeacherId": null,
+                      "assistantTeacherName": null,
+                      "startDate": "2026-05-06",
+                      "endDate": "2026-08-01",
+                      "maxStudents": 25,
+                      "tuitionFee": 1300000,
+                      "status": "ONGOING",
+                      "createdAt": "2026-04-19T13:14:47",
+                      "updatedAt": "2026-04-19T13:14:47"
+                  },
+                  {
+                      "id": 2,
+                      "classCode": "SCRATCH-B",
+                      "name": "Scratch cơ bản B",
+                      "courseId": 2,
+                      "courseName": "Lập trình Scratch cơ bản",
+                      "roomId": 2,
+                      "roomName": "Phòng 102",
+                      "scheduleSlotId": 3,
+                      "scheduleLabel": "T7-0800 - T7",
+                      "mainTeacherId": 3,
+                      "mainTeacherName": "Nguyễn Tuấn Anh",
+                      "assistantTeacherId": null,
+                      "assistantTeacherName": null,
+                      "startDate": "2026-05-10",
+                      "endDate": "2026-07-10",
+                      "maxStudents": 20,
+                      "tuitionFee": 1500000,
+                      "status": "OPEN",
+                      "createdAt": "2026-04-19T13:14:47",
+                      "updatedAt": "2026-04-19T13:14:47"
+                  },
+                  {
+                      "id": 1,
+                      "classCode": "AVTN1-A",
+                      "name": "Anh văn thiếu nhi 1A",
+                      "courseId": 1,
+                      "courseName": "Anh văn thiếu nhi 1",
+                      "roomId": 1,
+                      "roomName": "Phòng 101",
+                      "scheduleSlotId": 1,
+                      "scheduleLabel": "T2-1730 - T2",
+                      "mainTeacherId": 1,
+                      "mainTeacherName": "Lê Hoàng Nam",
+                      "assistantTeacherId": 2,
+                      "assistantTeacherName": "Phạm Thu Hà",
+                      "startDate": "2026-05-05",
+                      "endDate": "2026-07-30",
+                      "maxStudents": 25,
+                      "tuitionFee": 1200000,
+                      "status": "OPEN",
+                      "createdAt": "2026-04-19T13:14:47",
+                      "updatedAt": "2026-04-19T13:14:47"
+                  }
+              ],
+              "empty": false,
+              "first": true,
+              "last": true,
+              "number": 0,
+              "numberOfElements": 3,
+              "pageable": {
+                  "offset": 0,
+                  "pageNumber": 0,
+                  "pageSize": 10,
+                  "paged": true,
+                  "sort": {
+                      "empty": false,
+                      "sorted": true,
+                      "unsorted": false
+                  },
+                  "unpaged": false
+              },
+              "size": 10,
+              "sort": {
+                  "empty": false,
+                  "sorted": true,
+                  "unsorted": false
+              },
+              "totalElements": 3,
+              "totalPages": 1
+          },
+          "timestamp": "2026-05-03T09:56:45.5602518"
+      }
+order: 1000

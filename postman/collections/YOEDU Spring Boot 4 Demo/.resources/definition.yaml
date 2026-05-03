@@ -1,0 +1,14 @@
+$kind: collection
+variables:
+  baseUrl: http://localhost:8080
+  token: ""
+  studentId: "1"
+  teacherId: "1"
+  courseId: "1"
+  courseClassId: "1"
+  roomId: "1"
+  scheduleSlotId: "1"
+  promotionId: "1"
+  invoiceId: "1"
+  paymentId: "1"
+  leaveRequestId: "1"

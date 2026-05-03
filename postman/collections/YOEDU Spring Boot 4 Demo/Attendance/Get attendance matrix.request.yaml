@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/attendances/matrix/{{courseClassId}}?year=2026&month=6"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  year: "2026"
+  month: "6"
+order: 4000
