@@ -3,7 +3,9 @@ package com.khang.day1.controller;
 import com.khang.day1.common.ApiResponse;
 import com.khang.day1.domain.entity.Student;
 import com.khang.day1.dto.student.StudentResponse;
+import com.khang.day1.dto.student.StudentUpsertRequest;
 import com.khang.day1.service.StudentService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,13 +37,13 @@ public class StudentController {
     }
 
     @PostMapping
-    public ResponseEntity<ApiResponse<StudentResponse>> save(@RequestBody Student student) {
+    public ResponseEntity<ApiResponse<StudentResponse>> save(@Valid @RequestBody StudentUpsertRequest student) {
         StudentResponse studentResponse = studentService.create(student);
         return ResponseEntity.ok(ApiResponse.success(studentResponse));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse<StudentResponse>> update(@RequestBody Student student, @PathVariable Long id) {
+    public ResponseEntity<ApiResponse<StudentResponse>> update(@Valid @RequestBody StudentUpsertRequest student, @PathVariable Long id) {
         StudentResponse studentResponse = studentService.update(student, id);
         return ResponseEntity.ok(ApiResponse.success(studentResponse));
     }
