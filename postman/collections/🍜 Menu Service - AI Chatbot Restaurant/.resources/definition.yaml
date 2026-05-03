@@ -1,0 +1,16 @@
+$kind: collection
+description: |-
+  Postman collection đầy đủ cho Menu Service.
+
+  **Cách dùng:**
+  1. Import file này vào Postman.
+  2. Cập nhật 2 biến trong tab **Variables** của Collection:
+     - `BASE_URL` = `http://localhost:3001` ← chỉ host, không có /api/v1
+     - `SERVICE_TOKEN` = token trong file `.env`
+
+  **Lưu ý:** Tất cả route đã có prefix `/api/v1` (cấu hình trong main.ts).
+variables:
+  BASE_URL: http://localhost:3001
+  SERVICE_TOKEN: your-service-token-here
+  DOCUMENT_ID: ""
+  MENU_ITEM_ID: ""

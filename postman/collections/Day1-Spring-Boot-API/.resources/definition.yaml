@@ -1,0 +1,5 @@
+$kind: collection
+name: Day1 Spring Boot API
+variables:
+  - key: baseUrl
+    value: 'http://localhost:8080'

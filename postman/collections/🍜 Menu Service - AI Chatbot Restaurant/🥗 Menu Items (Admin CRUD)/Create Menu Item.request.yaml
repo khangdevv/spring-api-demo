@@ -1,0 +1,42 @@
+$kind: http-request
+description: |
+  Tạo một món ăn mới.
+
+  **Body fields:**
+  | Field | Bắt buộc | Kiểu | Mô tả |
+  |---|---|---|---|
+  | `name` | ✅ | string | Tên món (tối đa 200 ký tự) |
+  | `price` | ✅ | number | Giá (VNĐ) |
+  | `category` | ❌ | string | Danh mục |
+  | `description` | ❌ | string | Mô tả |
+  | `ingredients` | ❌ | string[] | Nguyên liệu |
+  | `tags` | ❌ | string[] | Tags |
+  | `is_available` | ❌ | boolean | Đang bán |
+url: "{{BASE_URL}}/api/v1/admin/menu-items"
+method: POST
+headers:
+  x-user-role: admin
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "Phở bò tái nạm",
+      "category": "food",
+      "description": "Phở bò truyền thống với tái và nạm",
+      "price": 65000,
+      "ingredients": ["bò", "bánh phở", "hành lá", "giá"],
+      "tags": ["beef", "noodle", "soup"],
+      "is_available": true
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      if (pm.response.code === 201) {
+        const res = pm.response.json();
+        pm.collectionVariables.set('MENU_ITEM_ID', res.id);
+        console.log('✅ Menu Item ID saved:', res.id);
+      }
+    language: text/javascript
+examples: ./.resources/Create Menu Item.resources/examples
+order: 1000

@@ -1,0 +1,14 @@
+$kind: http-request
+name: POST /api/amenities
+url: "{{baseUrl}}/api/amenities"
+method: POST
+headers:
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "type": "Wifi"
+    }
+order: 2000

@@ -1,0 +1,11 @@
+$kind: collection
+description: Requests extracted from FE axios calls. Base host is already set to Render API domain.
+variables:
+  baseUrl: https://api.baokhangtech.id.vn
+  token: ""
+  userId: "1"
+  postId: "1"
+  savedPostId: "1"
+  verificationId: "1"
+  planId: PRO
+  year: "2026"

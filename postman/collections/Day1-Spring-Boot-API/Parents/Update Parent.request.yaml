@@ -1,0 +1,17 @@
+$kind: http-request
+name: Update Parent
+method: PUT
+url: '{{baseUrl}}/parents/{{parentId}}'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "fullName": "Tran Thi B (Updated)",
+      "phoneNumber": "0912345678",
+      "email": "parent.updated@example.com",
+      "address": "456 New Street, Ho Chi Minh City"
+    }

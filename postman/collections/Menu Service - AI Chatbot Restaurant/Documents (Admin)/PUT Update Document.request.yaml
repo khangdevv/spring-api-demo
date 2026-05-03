@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/admin/menu/upload/{{document_id}}"
+method: PUT
+headers:
+  x-service-token: "{{service_token}}"
+  x-user-role: "{{admin_role}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "parsed_status": "pending",
+      "index_status": "pending"
+    }
+order: 4000

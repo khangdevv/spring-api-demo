@@ -1,0 +1,11 @@
+$kind: http-request
+name: GET /api/verifications (admin)
+url: "{{baseUrl}}/api/verifications?page=0&size=200&status=PENDING"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  page: "0"
+  size: "200"
+  status: PENDING
+order: 4000

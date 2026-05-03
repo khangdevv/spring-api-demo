@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{rabbit_base_url}}/api/exchanges/%2F/chatbot.events/publish"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "properties": {},
+      "routing_key": "menu.sync.all",
+      "payload": "{\"event_id\":\"manual-{{$timestamp}}\",\"event_type\":\"menu.sync.all\",\"trace_id\":\"pm-{{$timestamp}}\",\"occurred_at\":\"{{$isoTimestamp}}\",\"source_service\":\"postman\",\"schema_version\":1,\"data\":{\"item_count\":0,\"sync_type\":\"full\"}}",
+      "payload_encoding": "string"
+    }
+auth:
+  type: basic
+  credentials:
+    username: "{{rabbit_user}}"
+    password: "{{rabbit_pass}}"
+order: 2000

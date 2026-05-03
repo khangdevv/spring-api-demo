@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /api/verifications/me
+url: "{{baseUrl}}/api/verifications/me"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+order: 1000

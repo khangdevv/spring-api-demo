@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/billing/invoices"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "invoiceCode": "INV-DEMO-001",
+      "studentId": {{studentId}},
+      "courseClassId": {{courseClassId}},
+      "billingMonth": "2026-06-01",
+      "originalAmount": 1200000,
+      "promotionId": {{promotionId}},
+      "dueDate": "2026-06-10",
+      "note": "Phieu demo"
+    }
+order: 1000

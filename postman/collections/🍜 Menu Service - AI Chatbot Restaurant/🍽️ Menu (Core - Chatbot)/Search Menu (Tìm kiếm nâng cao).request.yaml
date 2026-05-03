@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/menu/search?limit=10&page=1&q=Bò lúc lắc khoai tây chiên"
+method: GET
+headers:
+  x-service-token: "{{SERVICE_TOKEN}}"
+queryParams:
+  - key: limit
+    value: "10"
+  - key: category
+    value: ""
+    disabled: true
+  - key: tags
+    value: ""
+    disabled: true
+  - key: ingredients
+    value: ""
+    disabled: true
+  - key: min_price
+    value: ""
+    disabled: true
+  - key: max_price
+    value: ""
+    disabled: true
+  - key: available
+    value: "true"
+    disabled: true
+  - key: page
+    value: "1"
+  - key: q
+    value: Bò lúc lắc khoai tây chiên
+order: 2000

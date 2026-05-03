@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/admin/menu/upload/{{DOCUMENT_ID}}"
+method: GET
+order: 3000

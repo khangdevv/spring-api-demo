@@ -1,0 +1,7 @@
+$kind: http-request
+name: DELETE /api/saved-posts/:savedPostId
+url: "{{baseUrl}}/api/saved-posts/{{savedPostId}}"
+method: DELETE
+headers:
+  Authorization: Bearer {{token}}
+order: 3000

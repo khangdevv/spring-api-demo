@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "studentCode": "HV999",
+      "fullName": "Hoc vien Demo",
+      "dateOfBirth": "2014-08-10",
+      "gender": "MALE",
+      "gradeLevel": "Lop 6",
+      "schoolName": "THCS Demo",
+      "phone": "0933999999",
+      "parentId": 1,
+      "status": "ACTIVE",
+      "latestScore": 8.2,
+      "note": "Tao tu Postman"
+    }
+order: 3000

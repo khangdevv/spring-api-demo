@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/menu?page=1&limit=10&is_available=true"
+method: GET
+headers:
+  x-service-token: "{{service_token}}"
+queryParams:
+  page: "1"
+  limit: "10"
+  is_available: "true"
+order: 1000

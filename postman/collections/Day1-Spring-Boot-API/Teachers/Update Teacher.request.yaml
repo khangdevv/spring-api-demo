@@ -1,0 +1,20 @@
+$kind: http-request
+name: Update Teacher
+method: PUT
+url: '{{baseUrl}}/teachers/{{teacherId}}'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "teacherCode": "T001",
+      "fullName": "Nguyen Van A (Updated)",
+      "phone": "0901234567",
+      "email": "teacher.updated@example.com",
+      "role": "ASSISTANT",
+      "id_card_url": "https://example.com/id-card.jpg",
+      "active": true
+    }

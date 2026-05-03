@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/api/teachers?search=&page=0&size=10&sort=id,desc"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  search: ""
+  page: "0"
+  size: "10"
+  sort: id,desc
+order: 1000

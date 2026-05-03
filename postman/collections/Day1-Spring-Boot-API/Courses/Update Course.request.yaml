@@ -1,0 +1,19 @@
+$kind: http-request
+name: Update Course
+method: PUT
+url: '{{baseUrl}}/courses/{{courseId}}'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "courseCode": "CS101",
+      "courseName": "Introduction to Computer Science (Updated)",
+      "description": "An updated beginner course in CS",
+      "tuitionFee": 550.0,
+      "totalSessions": 22,
+      "isActive": 1
+    }

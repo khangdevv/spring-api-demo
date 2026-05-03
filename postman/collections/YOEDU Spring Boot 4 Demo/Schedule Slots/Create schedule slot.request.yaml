@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/schedule-slots"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "slotCode": "CAL999",
+      "weekday": 2,
+      "startTime": "18:00:00",
+      "endTime": "19:30:00",
+      "note": "Ca toi thu 2"
+    }
+order: 3000

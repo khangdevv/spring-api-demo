@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{baseUrl}}/api/course-classes/{{courseClassId}}"
+method: DELETE
+headers:
+  Authorization: Bearer {{token}}
+order: 6000

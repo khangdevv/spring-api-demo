@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  Base path: /api/v1/core/menu
+
+  Chỉ cần header x-service-token.
+order: 3000

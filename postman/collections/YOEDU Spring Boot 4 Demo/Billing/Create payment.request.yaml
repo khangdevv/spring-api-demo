@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/api/billing/payments"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "invoiceId": {{invoiceId}},
+      "paymentCode": "PAY-DEMO-001",
+      "paidAmount": 1200000,
+      "paymentMethod": "CASH",
+      "paidAt": "2026-06-05T10:00:00",
+      "note": "Thu hoc phi bang Postman"
+    }
+order: 3000

@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{baseUrl}}/api/enrollments/class/{{courseClassId}}"
+method: GET
+headers:
+  Authorization: Bearer {{token}}
+order: 2000

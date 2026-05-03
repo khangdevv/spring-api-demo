@@ -1,0 +1,14 @@
+$kind: http-request
+name: POST /auth/login-google
+url: "{{baseUrl}}/auth/login-google"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "token": "google_access_token",
+      "role": "STUDENT"
+    }
+order: 3000

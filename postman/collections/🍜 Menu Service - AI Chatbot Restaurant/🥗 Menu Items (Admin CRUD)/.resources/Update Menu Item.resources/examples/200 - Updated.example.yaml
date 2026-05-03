@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: ""
+  method: PATCH
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "Phở bò tái nạm",
+        "price": 70000,
+        "is_available": false
+      }
+order: 1000

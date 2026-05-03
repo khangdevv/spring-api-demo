@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/promotions/{{promotionId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: json
+  content: |-
+    {
+      "promoCode": "KM999",
+      "name": "Khuyen mai Demo Updated",
+      "discountType": "PERCENTAGE",
+      "discountValue": 15,
+      "startDate": "2026-06-01",
+      "endDate": "2026-07-15",
+      "isActive": true,
+      "note": "Gia han them 15 ngay"
+    }
+order: 4000

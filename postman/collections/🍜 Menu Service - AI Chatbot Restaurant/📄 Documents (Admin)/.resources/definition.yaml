@@ -1,0 +1,8 @@
+$kind: collection
+description: |-
+  Base path: /api/v1/admin/menu/upload
+
+  Yêu cầu 2 headers:
+  - x-service-token
+  - x-admin-role
+order: 2000

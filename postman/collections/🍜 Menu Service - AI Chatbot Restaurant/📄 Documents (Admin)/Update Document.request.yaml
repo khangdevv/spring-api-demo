@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/admin/menu/upload/{{DOCUMENT_ID}}"
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "is_active": false
+    }
+order: 4000

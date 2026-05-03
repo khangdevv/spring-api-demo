@@ -1,0 +1,14 @@
+$kind: http-request
+name: PUT /api/verifications/:verificationId/reject
+url: "{{baseUrl}}/api/verifications/{{verificationId}}/reject"
+method: PUT
+headers:
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "reason": "Image not clear"
+    }
+order: 6000

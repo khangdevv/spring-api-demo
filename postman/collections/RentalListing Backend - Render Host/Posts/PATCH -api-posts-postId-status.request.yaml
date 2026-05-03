@@ -1,0 +1,9 @@
+$kind: http-request
+name: PATCH /api/posts/:postId/status
+url: "{{baseUrl}}/api/posts/{{postId}}/status?status=ACTIVE"
+method: PATCH
+headers:
+  Authorization: Bearer {{token}}
+queryParams:
+  status: ACTIVE
+order: 7000

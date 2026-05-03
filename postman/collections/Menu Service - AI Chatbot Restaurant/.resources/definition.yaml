@@ -1,0 +1,13 @@
+$kind: collection
+description: Full Postman collection for menu-service (core, admin CRUD, upload, worker placeholders, and optional RabbitMQ management API tests).
+variables:
+  base_url: http://localhost:3003
+  service_token: menu_secret_token_123
+  admin_role: admin
+  user_id: postman-admin
+  trace_id: pm-trace-001
+  menu_item_id: ""
+  document_id: ""
+  rabbit_base_url: http://localhost:15672
+  rabbit_user: guest
+  rabbit_pass: guest

@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{BASE_URL}}/api/v1/menu?page=1&limit=20&is_available=true"
+method: GET
+headers:
+  x-service-token: "{{SERVICE_TOKEN}}"
+queryParams:
+  - key: page
+    value: "1"
+    description: Số trang
+  - key: limit
+    value: "20"
+    description: Số item/trang
+  - key: is_available
+    value: "true"
+    description: true | false
+  - key: category
+    value: ""
+    disabled: true
+    description: Danh mục (food, drink...)
+  - key: tags
+    value: ""
+    disabled: true
+    description: Tags (spicy, vegetarian...)
+order: 1000

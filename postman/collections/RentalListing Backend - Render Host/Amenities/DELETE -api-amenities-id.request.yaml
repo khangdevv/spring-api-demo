@@ -1,0 +1,7 @@
+$kind: http-request
+name: DELETE /api/amenities/:id
+url: "{{baseUrl}}/api/amenities/1"
+method: DELETE
+headers:
+  Authorization: Bearer {{token}}
+order: 3000
