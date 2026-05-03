@@ -1,9 +1,7 @@
 package com.khang.day1.domain.entity;
 
 import com.khang.day1.domain.AuditableEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
 
@@ -16,10 +14,10 @@ import lombok.*;
 @Table(name = "parents")
 public class Parent extends AuditableEntity {
 
-    @Column(columnDefinition = "varchar(100)")
+    @Column(name = "full_name", columnDefinition = "varchar(100)")
     private String fullName;
 
-    @Column(columnDefinition = "varchar(20)")
+    @Column(name = "phone", columnDefinition = "varchar(20)")
     private String phoneNumber;
 
     @Email
