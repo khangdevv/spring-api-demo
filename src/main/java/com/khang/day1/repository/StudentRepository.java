@@ -6,8 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
-<<<<<<< HEAD
-=======
 
->>>>>>> demo_day2
 }
