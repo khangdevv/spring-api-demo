@@ -3,6 +3,7 @@ package com.khang.day1.service.impl;
 import com.khang.day1.domain.entity.Parent;
 import com.khang.day1.domain.entity.Student;
 import com.khang.day1.dto.student.StudentResponse;
+import com.khang.day1.dto.student.StudentUpdateRequest;
 import com.khang.day1.dto.student.StudentUpsertRequest;
 import com.khang.day1.repository.ParentRepository;
 import com.khang.day1.repository.StudentRepository;
@@ -33,7 +34,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public StudentResponse update(StudentUpsertRequest student, Long id) {
+    public StudentResponse update(StudentUpdateRequest student, Long id) {
         Student existingStudent = studentRepository.findById(id).orElseThrow(() -> new RuntimeException("Student not found with id: " + id));
         modelMapper.map(student, existingStudent);
         return map(studentRepository.save(existingStudent));

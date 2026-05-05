@@ -1,17 +1,21 @@
 package com.khang.day1.service;
 
+import com.khang.day1.common.exception.NotFoundException;
 import com.khang.day1.domain.entity.Parent;
+import com.khang.day1.dto.parent.ParentInsertRequest;
+import com.khang.day1.dto.parent.ParentResponse;
+import com.khang.day1.dto.parent.ParentUpdateRequest;
 
 import java.util.List;
 
 public interface ParentService {
-    List<Parent> findAll();
+    List<ParentResponse> findAll();
 
-    Parent findById(Long id);
+    ParentResponse findById(Long id);
 
-    Parent save(Parent parent);
+    ParentResponse save(ParentInsertRequest parent);
 
-    Parent update(Long id, Parent parent);
+    ParentResponse update(Long id, ParentUpdateRequest parent) throws NotFoundException;
 
-    void deleteById(Long id);
+    void deleteById(Long id) throws NotFoundException;
 }

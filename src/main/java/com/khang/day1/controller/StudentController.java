@@ -1,8 +1,10 @@
 package com.khang.day1.controller;
 
 import com.khang.day1.common.ApiResponse;
+import com.khang.day1.common.exception.NotFoundException;
 import com.khang.day1.domain.entity.Student;
 import com.khang.day1.dto.student.StudentResponse;
+import com.khang.day1.dto.student.StudentUpdateRequest;
 import com.khang.day1.dto.student.StudentUpsertRequest;
 import com.khang.day1.service.StudentService;
 import jakarta.validation.Valid;
@@ -31,7 +33,7 @@ public class StudentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse<Void>> deleteById(@PathVariable Long id) {
+    public ResponseEntity<ApiResponse<Void>> deleteById(@PathVariable Long id) throws NotFoundException {
         studentService.deleteById(id);
         return ResponseEntity.ok(ApiResponse.success(null));
     }
@@ -43,7 +45,7 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse<StudentResponse>> update(@Valid @RequestBody StudentUpsertRequest student, @PathVariable Long id) {
+    public ResponseEntity<ApiResponse<StudentResponse>> update(@Valid @RequestBody StudentUpdateRequest student, @PathVariable Long id) throws NotFoundException {
         StudentResponse studentResponse = studentService.update(student, id);
         return ResponseEntity.ok(ApiResponse.success(studentResponse));
     }

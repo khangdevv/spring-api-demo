@@ -1,6 +1,5 @@
 package com.khang.day1.dto.student;
 
-import com.khang.day1.domain.entity.Parent;
 import com.khang.day1.domain.enums.Gender;
 import com.khang.day1.domain.enums.StudentStatus;
 import jakarta.validation.constraints.*;
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class StudentUpsertRequest {
+public class StudentUpdateRequest {
     @Size(min = 5, max = 20, message = "Student code must be between 5 and 20 characters")
     String studentCode;
 
@@ -37,8 +36,6 @@ public class StudentUpsertRequest {
 
     @Min(value = 1, message = "Parent ID must be greater than or equal to 1")
     Long parent_id;
-
-    StudentStatus status = StudentStatus.ACTIVE;
 
     @Min(value = 0, message = "Latest score must be greater than or equal to 0")
     @Max(value = 10, message = "Latest score must be less than or equal to 10")

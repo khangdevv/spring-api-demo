@@ -1,4 +1,6 @@
-package com.khang.day1.dto.parent;
+package com.khang.day1.dto.teacher;
+
+import com.khang.day1.domain.enums.TeacherRole;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +11,15 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ParentResponse {
+public class TeacherResponse {
     private Long id;
+    private String teacherCode;
     private String fullName;
-    private String phoneNumber;
+    private String phone;
     private String email;
-    private String address;
+    private TeacherRole role = TeacherRole.TEACHER;
+    private String id_card_url;
+    private Boolean active;
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 }

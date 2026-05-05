@@ -1,4 +1,4 @@
-package com.khang.day1.dto.parent;
+package com.khang.day1.dto.course;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +9,14 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ParentResponse {
-    private Long id;
-    private String fullName;
-    private String phoneNumber;
-    private String email;
-    private String address;
+public class CourseResponse {
+    Long id;
+    String courseCode;
+    String courseName;
+    String description;
+    double tuitionFee;
+    int totalSessions;
+    byte isActive;
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 }

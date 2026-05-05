@@ -1,17 +1,21 @@
 package com.khang.day1.service;
 
+import com.khang.day1.common.exception.NotFoundException;
 import com.khang.day1.domain.entity.Teacher;
+import com.khang.day1.dto.teacher.TeacherInsertRequest;
+import com.khang.day1.dto.teacher.TeacherResponse;
+import com.khang.day1.dto.teacher.TeacherUpdateRequest;
 
 import java.util.List;
 
 public interface TeacherService {
-    List<Teacher> findAll();
+    List<TeacherResponse> findAll();
 
-    Teacher findById(Long id);
+    TeacherResponse findById(Long id);
 
-    Teacher save(Teacher teacher);
+    TeacherResponse save(TeacherInsertRequest teacher);
 
-    Teacher update(Long id, Teacher teacher);
+    TeacherResponse update(Long id, TeacherUpdateRequest teacher) throws NotFoundException;
 
-    void deleteById(Long id);
+    void deleteById(Long id) throws NotFoundException;
 }

@@ -1,17 +1,21 @@
 package com.khang.day1.service;
 
+import com.khang.day1.common.exception.NotFoundException;
 import com.khang.day1.domain.entity.Course;
+import com.khang.day1.dto.course.CourseInsertRequest;
+import com.khang.day1.dto.course.CourseResponse;
+import com.khang.day1.dto.course.CourseUpdateRequest;
 
 import java.util.List;
 
 public interface CourseService {
-    List<Course> findAll();
+    List<CourseResponse> findAll();
     
-    Course findById(Long id);
+    CourseResponse findById(Long id);
     
-    Course save(Course course);
+    CourseResponse save(CourseInsertRequest course);
     
-    Course update(Long id, Course course);
+    CourseResponse update(Long id, CourseUpdateRequest course) throws NotFoundException;
     
-    void deleteById(Long id);
+    void deleteById(Long id) throws NotFoundException;
 }

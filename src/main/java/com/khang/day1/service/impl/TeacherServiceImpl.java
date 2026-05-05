@@ -1,10 +1,14 @@
 package com.khang.day1.service.impl;
 
 import com.khang.day1.domain.entity.Teacher;
+import com.khang.day1.dto.teacher.TeacherInsertRequest;
+import com.khang.day1.dto.teacher.TeacherResponse;
+import com.khang.day1.dto.teacher.TeacherUpdateRequest;
 import com.khang.day1.repository.TeacherRepository;
 import com.khang.day1.service.TeacherService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,41 +18,38 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TeacherServiceImpl implements TeacherService {
     private final TeacherRepository teacherRepository;
+    private final ModelMapper modelMapper;
 
     @Override
-    public List<Teacher> findAll() {
-        return teacherRepository.findAll();
+    public List<TeacherResponse> findAll() {
+        return teacherRepository.findAll().stream()
+                .map(this::map)
+                .toList();
     }
 
     @Override
-    public Teacher findById(Long id) {
-        return teacherRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Teacher not found with id: " + id));
+    public TeacherResponse findById(Long id) {
+        return modelMapper.map(teacherRepository.findById(id), TeacherResponse.class);
     }
 
     @Override
-    public Teacher save(Teacher teacher) {
-        return teacherRepository.save(teacher);
+    public TeacherResponse save(TeacherInsertRequest teacher) {
+        return map(teacherRepository.save(modelMapper.map(teacher, Teacher.class)));
     }
 
     @Override
-    public Teacher update(Long id, Teacher teacher) {
-        Teacher existingTeacher = teacherRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Teacher not found with id: " + id));
-
-        existingTeacher.setTeacherCode(teacher.getTeacherCode());
-        existingTeacher.setFullName(teacher.getFullName());
-        existingTeacher.setEmail(teacher.getEmail());
-        existingTeacher.setPhone(teacher.getPhone());
-        existingTeacher.setRole(teacher.getRole());
-        existingTeacher.setId_card_url(teacher.getId_card_url());
-        existingTeacher.setActive(teacher.getActive());
-
-        return teacherRepository.save(existingTeacher);
+    public TeacherResponse update(Long id, TeacherUpdateRequest teacher) {
+        Teacher existingTeacher = teacherRepository.findById(id).orElseThrow(() -> new RuntimeException("Teacher not found with id: " + id));
+        modelMapper.map(teacher, existingTeacher);
+        return map(teacherRepository.save(existingTeacher));
     }
 
     @Override
     public void deleteById(Long id) {
         teacherRepository.deleteById(id);
+    }
+
+    private TeacherResponse map(Teacher teacher) {
+        return modelMapper.map(teacher, TeacherResponse.class);
     }
 }
